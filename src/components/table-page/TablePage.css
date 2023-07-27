@@ -1,0 +1,33 @@
+/* AccountTable.css */
+* {
+    /* background-color: grey; */
+}
+
+.table-data {
+    padding: 20px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 2px solid #ccc;
+    padding: 20px;
+
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+.details {
+font-size: 23px;
+margin-bottom: 15px;
+}

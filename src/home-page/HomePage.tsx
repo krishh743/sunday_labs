@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {useNavigate} from "react-router";
 
 function Copyright() {
   return (
@@ -30,11 +31,10 @@ function Copyright() {
 }
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -63,7 +63,7 @@ export default function HomePage() {
               color="text.primary"
               gutterBottom
             >
-              Hi, There
+              Sunday Labs
             </Typography>
             <Typography
               variant="h5"
@@ -85,6 +85,7 @@ export default function HomePage() {
                 variant="contained"
                 color="success"
                 sx={{width: "200px", height: "60px", fontSize: "19px"}}
+                onClick={() => navigate("/table")}
               >
                 Table page
               </Button>
@@ -92,8 +93,9 @@ export default function HomePage() {
                 variant="contained"
                 color="secondary"
                 sx={{width: "200px", height: "60px", fontSize: "19px"}}
+                onClick={() => navigate("/graph")}
               >
-               Graph page
+                Graph page
               </Button>
             </Stack>
           </Container>
