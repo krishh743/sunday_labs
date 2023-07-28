@@ -18,7 +18,7 @@ interface AccountTableProps {
   toggleExpand: (accountId: string) => void;
 }
 
-const AccountTable: React.FC<AccountTableProps> = ({
+const TablePage: React.FC<AccountTableProps> = ({
   data,
   level = 0,
   expandedAccounts,
@@ -60,7 +60,7 @@ const AccountTable: React.FC<AccountTableProps> = ({
                   </td>
                 </tr>
                 {isExpanded && account.children && (
-                  <AccountTable
+                  <TablePage
                     data={account.children}
                     level={level + 1}
                     expandedAccounts={expandedAccounts}
@@ -76,4 +76,4 @@ const AccountTable: React.FC<AccountTableProps> = ({
   );
 };
 
-export default AccountTable;
+export default TablePage;

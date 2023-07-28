@@ -57,25 +57,14 @@ export const jsonData = {
   },
 };
 
-
-export  const monthlyData = {
+ export const monthlyData = {
+  title: "Monthly Sales Performance",
   labels: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-  datasets: [
-    {
-      label: "Monthly Sales Performance",
-      data: [15000, 8000, 4500, 11000, 2000, 9500],
-      backgroundColor: "rgba(75, 192, 192, 0.2)",
-    },
-  ],
+  data: [15000, 8000, 4500, 11000, 2000, 9500],
 };
 
 export const quarterlyData = {
+  title: "Sales Performance",
   labels: ["Q1", "Q2", "Q3", "Q4"],
-  datasets: [
-    {
-      label: "Sales Performance",
-      data: [15000, 8000, 4500, 11000],
-      backgroundColor: "rgba(255, 99, 132, 0.2)",
-    },
-  ],
+  data: [15000, 8000, 4500, 11000],
 };
