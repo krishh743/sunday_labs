@@ -17,16 +17,17 @@ import Tab from "@mui/material/Tab";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import {Tabs} from "@mui/material";
-import {monthlyData, quarterlyData} from "../../data-file/Data";
+import {monthlyData, quarterlyData,pieChartDat} from "../../data-file/Data";
+import PieChartWithTable from "./PieChartWithTable";
 
 function GraphPage() {
-  const [currentTab, setCurrentTab] = useState<"monthly" | "quarterly">(
+  const [currentTab, setCurrentTab] = useState<"monthly" | "quarterly" | "pie">(
     "monthly"
   );
 
   const handleTabChange = (
     event: React.SyntheticEvent,
-    newValue: "monthly" | "quarterly"
+    newValue: "monthly" | "quarterly" | "pie"
   ) => {
     setCurrentTab(newValue);
   };
@@ -95,6 +96,8 @@ function GraphPage() {
           </BarChart>
         </ResponsiveContainer>
       )}
+              {/* <PieChartWithTable /> */}
+
     </>
   );
 }

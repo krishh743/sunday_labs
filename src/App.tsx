@@ -6,6 +6,7 @@ import {Route, Routes} from 'react-router';
 import TablePage from './components/table-page/TablePage';
 import {jsonData} from './data-file/Data';
 import GraphPage from './components/graph-page/GraphPage';
+import PDFViewer from './pdf-reader/PdfReader';
 
 interface Account {
   account_name: string;
@@ -43,6 +44,7 @@ const toggleExpand = (accountId: string) => {
           }
         ></Route>
         <Route path="/graph" element={<GraphPage />}></Route>
+        <Route path='/pdf' element={<PDFViewer/>}></Route>
       </Routes>
     </div>
   );

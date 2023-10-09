@@ -57,7 +57,7 @@ export const jsonData = {
   },
 };
 
- export const monthlyData = {
+export const monthlyData = {
   title: "Monthly Sales Performance",
   labels: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
   data: [15000, 8000, 4500, 11000, 2000, 9500],
@@ -67,4 +67,35 @@ export const quarterlyData = {
   title: "Sales Performance",
   labels: ["Q1", "Q2", "Q3", "Q4"],
   data: [15000, 8000, 4500, 11000],
+};
+
+export const pieChartDat = () => {
+  // Calculate the total sales across all months and quarters
+  const totalSales = [...monthlyData.data, ...quarterlyData.data].reduce(
+    (acc, curr) => acc + curr,
+    0
+  );
+
+  // Calculate the percentage of each data point
+  const monthlyPercentage = (monthlyData.data.reduce(
+    (acc, curr) => acc + curr,
+    0
+  ) /
+    totalSales) *
+    100;
+
+  const quarterlyPercentage = (quarterlyData.data.reduce(
+    (acc, curr) => acc + curr,
+    0
+  ) /
+    totalSales) *
+    100;
+
+  // Create the pie chart data
+  const pieChartData = [
+    { name: "Monthly Sales", value: monthlyPercentage, color: "#FF5733" },
+    { name: "Quarterly Sales", value: quarterlyPercentage, color: "#33FF57" },
+  ];
+
+  return pieChartData;
 };

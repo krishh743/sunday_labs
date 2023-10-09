@@ -42,7 +42,7 @@ export default function HomePage() {
         <Toolbar>
           {/* <CameraIcon sx={{mr: 2}} /> */}
           <Typography variant="h6" color="inherit" noWrap>
-            Sunday Labs
+            testing
           </Typography>
         </Toolbar>
       </AppBar>
@@ -63,7 +63,7 @@ export default function HomePage() {
               color="text.primary"
               gutterBottom
             >
-              Sunday Labs
+             Test App
             </Typography>
             <Typography
               variant="h5"
@@ -96,6 +96,14 @@ export default function HomePage() {
                 onClick={() => navigate("/graph")}
               >
                 Graph page
+              </Button>
+              <Button
+                variant="contained"
+                color="secondary"
+                sx={{width: "200px", height: "60px", fontSize: "19px"}}
+                onClick={() => navigate("/pdf")}
+              >
+                Pdf reader
               </Button>
             </Stack>
           </Container>
